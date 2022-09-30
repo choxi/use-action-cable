@@ -38,5 +38,8 @@
     "ActionCable",
     "hooks"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@babel/compat-data": "^7.19.3"
+  }
 }
