@@ -1,8 +1,8 @@
 // libraries
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from "react";
 
 // ActionCableHooks
-import { ActionCableContext } from './context.jsx';
+import { ActionCableContext } from "./context.jsx";
 
 export const useActionCable = (params, handlers = {}) => {
   const { conn } = useContext(ActionCableContext);
@@ -16,6 +16,6 @@ export const useActionCable = (params, handlers = {}) => {
 
     return () => subscription && subscription.unsubscribe();
   }, [diff]);
-  
+
   return subscription;
 };
